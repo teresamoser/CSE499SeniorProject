@@ -1,0 +1,18 @@
+<div class="panel panel-default">
+    <div class="panel-heading clearfix">
+        <div class="row">
+            <h1 class="panel-title text-left">{{ plant?.name }}</h1>
+            <img [src]="plant.imageUrl" class="plant-image">
+            <div class="col text-right">  
+                <a class="btn btn-primary" routerLinkActive="active" (click)="onEditPlant()">Edit</a>
+                <a class="btn btn-danger" routerLinkActive="active"(click)="onDeletePlant()">Delete</a>
+            </div>
+            </div>
+    </div>
+    <div class="panel-body">
+        <h4>Type: {{ plant.type }}</h4>
+        <h4>Water: {{ plant.water }}</h4>
+        <h4>Light: {{ plant.light }}</h4>
+    </div>
+</div>
+
