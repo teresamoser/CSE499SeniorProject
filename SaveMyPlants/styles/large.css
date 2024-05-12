@@ -29,24 +29,27 @@
         flex-direction: row-reverse;
         }
     
-    /* Sections Chamber Home page css */
+    /* Sections Save My Plants page css */
         #groups {
             grid-column: 1 / 3 ;
             border: 1px solid rgba(0, 0, 0, 0.2);
             padding: .5rem;
-            background-color: #847678;
+            background-color: #563635;
             color: #000;
             margin: auto;
+            }
+        #graphic {
+            background:#E4E6C3;
             }
        .comm-info, .weather {
             color: black;;
             padding: 1rem;
-            border-color:rgb(77, 24, 24);
+            border-color:#563635;
             border-style: solid;
             box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
             border-radius: 25px;
             gap: 1.5rem;
-            background:#a9927d;
+            background:#899878;;
             grid-row: 2;
             }
         .comm-info {
@@ -55,13 +58,13 @@
         .bus-spot1, .bus-spot2, .bus-spot3 {
             color: black;;
             padding: 1rem;
-            border-color:rgb(77, 24, 24);
+            border-color:#563635;
             border-style: solid;
             box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
             text-align: left;
             border-radius: 25px;
             gap: 1.5rem;
-            background:#a9927d;
+            background:#899878;
             grid-row: 3;
             text-align: center; 
             }

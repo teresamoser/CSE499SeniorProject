@@ -2,7 +2,7 @@
     box-sizing: border-box;
     }
 body {
-    background-color:#847678;
+    background-color:#222725;
     font-family: Tahoma, Verdana, sans-serif;
     }
 #header {
@@ -16,14 +16,14 @@ header {
     display: grid;
     padding: .5rem;
     grid-template-columns: auto 48px;
-    background: #49111C;
-    color: White;
+    background: #899878;
+    color: #222725;
     }
 header button{
     height: 48px;
     width: 48px;
     font-size: 2rem;
-    background-color:#a9927d;
+    background-color:#563635;
     }
 header img{
     display: flex;
@@ -36,7 +36,7 @@ header img{
     width: 100%;
     height: auto;
     }
-.join-button{
+.login-button{
     display: block;
     text-align: center;
     margin: auto;
@@ -47,7 +47,7 @@ header img{
     width: 250px;
     height: 50px;
     cursor: pointer;
-    background-color:rgb(236, 225, 195);
+    background-color:#A28F9D;
     color:black;
     }
 
@@ -60,7 +60,7 @@ nav  {
     right: 0px;
     margin: 0 auto;
     max-width: 760px;
-    background-color:#a9927d ;
+    background-color:#A28F9D  ;
     }
 .menu {
     list-style: none;
@@ -87,7 +87,7 @@ nav a {
     color:black;
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     transition: 0.5s ease-in-out;
-    background-color:#a9927d ;
+    background-color:#A28F9D ;
     } 
 nav.open {
     display: block;
@@ -100,7 +100,6 @@ header button.close::before {
     }
 /*end of menu*/
 
-
 /* Home page css */
 #groups {
     display: grid;
@@ -108,7 +107,7 @@ header button.close::before {
     border: 1px solid rgba(0, 0, 0, 0.2);
     padding: .5rem;
     min-width: auto;
-    background-color: #847678;
+    background-color: #563635 ;
     color: #000;      
     margin: auto;
     }
@@ -119,18 +118,19 @@ main section {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     text-align: center;
     border-radius: 25px;
-    background-color:#a9927d ;
+    background-color:#899878 ;
     gap: 1.5rem;
     }  
 #graphic {
-    border-color:rgb(77, 24, 24);
+    border-color:#563635;
+    background:#E4E6C3;
     border-style: solid;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     text-align: center;
     border-radius: 25px;
     }
 .comm-info img, .bus-spot1 img, .bus-spot2 img, .bus-spot3 img {
-    border-color:rgb(77, 24, 24);
+    border-color:#563635 ;
     border-style: solid;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     text-align: center;
@@ -149,8 +149,8 @@ main section {
     font-family: Tahoma,Verdana, Geneva, sans-serif;
     font-size: 30px;
     text-align: center;
-    border-color: #5a0b0b;
-    background-color:rgb(236, 225, 195);
+    border-color: #563635 ;
+    background-color:#899878;
     border-style: solid;
     box-shadow: 0 6px 18px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     padding: 10px;
@@ -174,8 +174,8 @@ p {
     font-family: Tahoma,Verdana, Geneva, sans-serif;
     font-size: 30px;
     text-align: center;
-    border-color: #5a0b0b;
-    background-color:rgb(236, 225, 195);
+    border-color: #563635 ;
+    background-color:#899878;
     border-style: solid;
     box-shadow: 0 6px 18px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     padding: 10px;
@@ -211,19 +211,19 @@ p {
     font-size: 30px;
     text-align: center;
     border-color: #5a0b0b;
-    background-color:rgb(236, 225, 195);
+    background-color:#899878;
     border-style: solid;
     box-shadow: 0 6px 18px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     padding: 10px;
     border-radius: 25px;
     }
 #business{
-    background-color: #847678;
+    background-color: #222725;
     width: 100%;
     }
 #cards section {
     border: solid;
-    background-color: #aa9888;
+    background-color: #899878;
     }
 #cards image {
     width: auto;
@@ -236,7 +236,7 @@ p {
     margin: 1rem auto;
     border: 1px solid rgba(0, 0, 0, 0.1);
     padding: 0.5rem;
-    background-color: #aa9888;
+    background-color: #899878;
     width: fit-content;
     }
 #directory button {
@@ -248,7 +248,7 @@ p {
 
     }
 #directory button:hover , #directory button:focus {
-    background-color: rgb(174, 120, 120);
+    background-color: #E4E6C3;
     cursor: pointer;
     }
 .grid section {
@@ -281,7 +281,7 @@ article.list {
 .list section {
     margin: 0;
     padding: 0.25rem;
-    background-color: #aa9888;
+    background-color: #899878;
     }
 .list section > * {
     margin: 0 1rem;
@@ -303,8 +303,8 @@ article.list {
     font-family: Tahoma,Verdana, Geneva, sans-serif;
     font-size: 30px;
     text-align: center;
-    border-color: #5a0b0b;
-    background-color:rgb(236, 225, 195);
+    border-color: #563635;
+    background-color:#899878;
     border-style: solid;
     box-shadow: 0 6px 18px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     padding: 10px;
@@ -312,10 +312,10 @@ article.list {
     }
 form fieldset {
     margin: 2rem 0;
-    border: 1px solid #070707f0;
+    border: 1px solid #563635;
     border-radius: 10px;
     padding: .5rem 2%;
-    background-color:rgb(236, 225, 195);
+    background-color:#899878;
     text-align: left;
     }
 form legend{
@@ -396,7 +396,7 @@ p {
 
 
 footer {
-    background: #5E503F;
+    background: #222725;
     color: #f2f4f3;
     padding: 2rem;
     text-align: center;

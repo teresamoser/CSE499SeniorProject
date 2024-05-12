@@ -28,7 +28,7 @@
 <body>
     <main>
         <header>
-            <h1 id="header">Save My Plants</h1>
+            <h1 id="header">Log In Page</h1>
             <button id="button"></button>
             <nav> 
                 <ul class="menu">
@@ -59,75 +59,26 @@
     </main>
     
         <section id="join">
-            <h2>Join the Rigby Chamber of Commerce</h2>
+            <h2>Create an account</h2>
             <form method="get" action="join-thanks.html">
                 <fieldset>
-                    <legend> Applicant Information</legend>
+                    <legend> LogIn Information</legend>
                     <label class="top"> First Name* <input type="text" name="fname" required></label>
                     <label class="top"> Last Name* <input type="text" name="lname" required></label>
-                    <label class="top"> Business Position Title<input type="text" name="bptitle" required></label>
                     <label class="top"> Phone <input type="tel" name="phone" placeholder="1235551234"></label>
                     <label class="top"> Email* <input type="email" name="email" placeholder="someone@gmail.com" required></label>
-                    <label class="top"> Business Name* <input type="text" name="busname" required></label>
-                    <label class="top"> Website <input type="url" name="url" placeholder="http://" required></label>
-                </fieldset>
-                <fieldset id="membership">
-                    <legend>Membership Level</legend>
-                    <div id="level">Level
-                        <label class="sbs"><input type="radio" name="audience" value="npmember"> NP (Non-Profit Organizations)</label>
-                        <label class="sbs"><input type="radio" name="audience" value="bronze"> Bronze Membership </label>
-                        <label class="sbs"><input type="radio" name="audience" value="silver"> Silver Membership</label>
-                        <label class="sbs"><input type="radio" name="audience" value="gold"> Gold Membership</label>
-                    </div>
-                    <div id="benefits">Membership Benefits
-                        <h4>NP (Non-Profit Organizations)</h4>
-                        <p>
-                            There is no fee for this memebership. You can place announcements on our website, but there will be no business spotlights.
-                        </p>
-                        <h4>Bronze Membership</h4>
-                        <p>
-                            Fee is $35.00 per month. This will give you one spotlight every 6 months. Monthly luncheon invitations.  
-                        </p>
-                        <h4>Silver Membership</h4>
-                        <p>
-                            Fee is $70.00 per month. This will give you one spotlight every other month. Monthly luncheon invitations. Chamber privileges and voting rights. 
-                        </p>
-                        <h4>Gold Membership</h4>
-                        <p>
-                            Fee is $150.00 per month. This will give you one spotlight per month. Monthly luncheon invitations. Chamber privileges, voting, seat on the board, and your votes are worth two votes,
-                        </p>
-                    </div>
+                    <label class="top"> Password* <input type="text" name="password" required></label>
                 </fieldset>
 
-                <fieldset>
-                    <legend>Membership Fee Payment</legend>
-                    <label class="top">Enter today's Date<input type="date" name="completeDate">
-                    </label>
-                    <label class="top"> Payment options
-                        <select name="subject">
-                            <option value=" ">Please Select &#9662;</option>
-                            <option value="monthly">Month-to-Month</option>
-                            <option value="six">Every Six Months</option>
-                            <option value="yearly">Yearly</option>
-                            <option value="two">Two year</option>
-                            <option value="four">Four year</option>
-                            <option value="six">Six year</option>
-                            <option value="Life">Lifetime</option>
-                        </select>
-                    </label>
-                    <label class="top">How many memberships <input type="number" name="members">
-                    </label>
-                </fieldset>
-
-                <input type="submit" value="Send application" class="submitBtn">
+                <input type="submit" value="Submit" class="submitBtn">
             </form>
         </section>
    
         <footer>
             <p> &copy;
                 <script>document.write(new Date().getFullYear())</script>
-                Rigby Chamber Of Commerce<br>
-                Teresa Moser WDD 230 Project 
+                Save My Plants<br>
+                Teresa Moser CSE 499 Senior Project
             </p>
 
             <p class="highlight" id="lastModified">
