@@ -38,6 +38,12 @@
                         <li title="Watering Schedule">
                             <a href="schedule.html" class="menu-item"> Watering Schedule </a>
                         </li>
+                        <li title="Light Exposure">
+                            <a href="light.html" class="menu-item"> Light Exposure </a>
+                        </li>
+                        <li title="Grouping">
+                            <a href="grouping.html" class="menu-item"> Grouping </a>
+                        </li>
                         <li title="Plant List">
                             <a href="plant-list.html" class="menu-item"> Plant List </a>
                         </li>
@@ -50,23 +56,49 @@
                      <a href="login.html" class="login-button">Log In</a><br>
                 </p> 
         </header> 
-        <div id="business">
-            <h1 id="title">Plant Directory</h1>
-                <div id="directory">
-                    <button id="grid"> 🔠 Grid </button>
-                    <button id="list"> 📋 List </button>
+        <div id="groups">
+            <section class="comm-info">
+                <h2>Welcome to Save My Plants</h2>
+                <img src="background-images/welcomePlants.jpeg" loading="lazy" width="300" height="200" alt="Welcome Plants">
+                <p>Welcome to your personalized plant web app.</p>
+            </section>
+
+            <section class="weather">
+                <h2>Current Weather</h2>
+                <div class="card">
+                    <p id="town"></p>
+                    <img id="graphic" src="https://openweathermap.org/img/wn/10d@2x.png" alt="image of weather">
+                    <p id="description"></p>
+                    <p id="temperature"></p>
                 </div>
-                <article class="grid">  
-                    <div id="cards"></div> 
-                </article>
-        </div>
+            </section>
+
+            <section class="bus-spot1">
+                <h2>Light Exposure</h2>
+                <img src="background-images/plantsInLight.jpeg" loading="lazy" width="200" height="150" alt="Light Exposure"><br>
+                <p>Find out how to give your plants the light they need.</p>
+            </section>
+
+            <section class="bus-spot2">
+                <h2>Watering Schedule</h2>
+                <img src="background-images/WetMyPlants.jpg" loading="lazy" width="200" height="150" alt="Watering Schedule"><br>
+                <p>Make a schedule for watering your plants</p>
+            </section>
+
+            <section class="bus-spot3">
+                <h2>Grouping</h2>
+                <img src="background-images/plantGroupingBenefits.jpeg" loading="lazy" width="200" height="150" alt="Plant Grouping"><br>
+                <p>Find out how to group your plants to benefit each other.</p>
+            </section>
+        </div>   
     </main>
         <footer>
             <p> &copy;
                 <script>document.write(new Date().getFullYear())</script>
                 Save My Plants<br>
-                Teresa Moser  CSE 499 Senior Project 
+                Teresa Moser  CSE 499 Senior Project
             </p>
+
             <p class="highlight" id="lastModified">
                 <script>
                 const date = new Date(document.lastModified);
@@ -74,8 +106,10 @@
                 </script>
             </p>
         </footer> 
+
              <!-- Javascript files -->
      <script src="scripts/plant-menu.js"></script> 
-     <script src="scripts/plant-list.js" ></script> 
+     <script src="scripts/visits.js" ></script> 
+     <script src="scripts/weather.js" ></script> 
 </body>
 </html>

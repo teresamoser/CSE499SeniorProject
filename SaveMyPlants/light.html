@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Save My Plants</title>
+    <title>Watering Schedule</title>
     <meta name="description" content="Save My Plants Senior Project for CSE 499.
              This page has the directory of all the user plants and shows their
              image, information, schedules.">
@@ -14,7 +14,7 @@
      <meta property="og:title" content="Teresa Moser Portal for CSE499">
      <meta property="og:type" content="website">
      <meta property="og:url" content=" ">
-     <meta property="og:images" content="background-images/plantstudio.jpeg">
+     <meta property="og:images" content="background-images/HeartLight.jpg">
      
      <!-- Favicon -->
      <link rel="icon" href="background-images/plant-favicon.jpeg">
@@ -30,8 +30,8 @@
         <header>
             <h1 id="header">Save My Plants</h1>
             <button id="button"></button>
-             <nav> 
-                 <ul class="menu">
+            <nav> 
+                <ul class="menu">
                     <li title="home">
                         <a href="main-index.html" id="menu-button"> Home </a>
                     </li>
@@ -52,27 +52,50 @@
                     </li>
                 </ul>
             </nav>
-                <p><img src="background-images/plantstudio.jpg" loading="lazy" width="400" height="200" alt="Plant Studio"><br>
-                     <a href="login.html" class="login-button">Log In</a><br>
+                <p><img src="background-images/HeartLight.jpg" loading="lazy" width="400" height="200" alt="Plant Studio"><br>
+                     <!-- <a href="login.html" class="login-button">Log In</a><br> -->
                 </p> 
-        </header> 
-        <div id="business">
-            <h1 id="title">Plant List</h1>
-                <div id="directory">
-                    <button id="grid"> 🔠 Grid </button>
-                    <button id="list"> 📋 List </button>
-                </div>
-                <article class="grid">  
-                    <div id="cards"></div> 
-                </article>
-        </div>
+        </header>      
     </main>
+    <div class="content">
+        <h2>Light Exposure for your Plants</h2>
+            <img src="images/TVPioneerAttraction.webp" loading="lazy" width="600" height="400" alt="TV museum"><br>
+                <h2>Rigby--The Birthplace of Television</h2><br>
+                    <p> </p><br>
+                
+            <img src="images/LabelleIcePalace.webp" loading="lazy" width="600" height="400" alt="Ice Palace"><br>
+                <h2>Labelle Ice Palace</h2><br>
+                <p> </p><br>
+                <br>
+            <img src="images/RigbyLake.webp" loading="lazy" width="600" height="400" alt="Rigby Lake"><br>
+                <h2>Rigby Lake</h2><br>
+                    <p>
+                    </p>
+                    <br>
+    </div>
+    <aside class="left-sidebar">
+            <h2>Grow Lights, How do they work?</h2>
+                <br>
+                <img src="" loading="lazy" width="375" height="325" alt="Average temps">
+                <br>
+                <br>
+
+            <section class="counter">
+                <p><span class="label">Number of Visits: </span><span class="visits"></span></p>
+            </section>
+            <br> 
+            <hr> 
+        <br>    
+        <br>
+    </aside>
         <footer>
             <p> &copy;
                 <script>document.write(new Date().getFullYear())</script>
-                Rigby Chamber Of Commerce<br>
-                Teresa Moser  WDD 230 Project 
+                Save My Plants <br>
+                Teresa Moser <br>
+                CSE 499 Senior Project
             </p>
+
             <p class="highlight" id="lastModified">
                 <script>
                 const date = new Date(document.lastModified);
