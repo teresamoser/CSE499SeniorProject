@@ -144,7 +144,7 @@ main section {
 /* End of Home page css */
 
 
-/* Discover page css */
+/* Grouping page css */
 .content h2{
     font-family: Tahoma,Verdana, Geneva, sans-serif;
     font-size: 30px;
@@ -164,7 +164,7 @@ main section {
     border-radius: 25px;
     top: 100px; 
     left: 50px; 
-    width: 100%;
+    width: 50%;
     height: auto;
     }
 p {
@@ -193,7 +193,7 @@ p {
     text-align: center;
     font-size: large;
     margin-top: -8px;
-    height:max-content;
+    height: max-content;
     }
 .counter {
     border-color:rgb(236, 225, 195);
@@ -202,10 +202,10 @@ p {
     border-radius: 25px;
     text-align: center;
     }
-/* Discover page css  end */
+/* Grouping page css  end */
 
 
-/* Directory page css  */
+/* Plant-List page css  */
 #business h1{
     font-family: Tahoma,Verdana, Geneva, sans-serif;
     font-size: 30px;
@@ -294,10 +294,10 @@ article.list {
     font-size: 1rem;
     font-family: Tahoma, Helvetica, sans-serif;
     }
-/* Directory page end */
+/* Plant-List page end */
 
 
-/* Join page css */
+/* Login page css */
 /*  --FORM-- */
 #join h2{
     font-family: Tahoma,Verdana, Geneva, sans-serif;
@@ -365,10 +365,10 @@ form label.top input:required:valid {
     border-left: green solid 6px;
     }
 
-/* Form and join page end */
+/* Form and Login page end */
 
 
-/* Discover visits per page */
+/* Grouping visits per page */
 .counter {
     font-family: Tahoma,Verdana, Geneva, sans-serif;
     font-size: 30px;
@@ -392,7 +392,7 @@ p {
     font-weight: bolder;
     font-size: larger;
     }
-/* Discover page ends  */
+/* Grouping visits page ends  */
 
 
 footer {
