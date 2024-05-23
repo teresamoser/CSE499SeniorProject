@@ -193,7 +193,7 @@ p {
     text-align: center;
     font-size: large;
     margin-top: -8px;
-    height: max-content;
+    height:max-content;
     }
 .counter {
     border-color:rgb(236, 225, 195);

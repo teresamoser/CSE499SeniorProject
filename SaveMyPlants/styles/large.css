@@ -71,7 +71,7 @@
     /*End Home page  */
       
              
-    /* Discover page css */
+    /* Grouping page css */
     .content {
         flex: 3;
         margin-left: 400px;
@@ -91,13 +91,13 @@
         padding: 10px;
         width: 400px;
         height: auto;
-        position: absolute;
-        top: 41rem;
+        position:absolute ;
+        top: 75rem;
         }
-    /* End Discover page */
+    /* End Grouping page */
     
     
-    /* Directory page css */
+    /* Plant-List page css */
     
         .grid #cards {
             display: grid;
@@ -115,7 +115,7 @@
             }
     
     
-    /* Join Form Page */
+    /* Login Form Page */
         form label.sbs {
             padding: .4rem 0;
             }
