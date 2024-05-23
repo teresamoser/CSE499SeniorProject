@@ -2,7 +2,7 @@
   "name": "cse499seniorproject",
   "version": "1.0.0",
   "description": "SaveMyPlants",
-  "main": "LoginSignup/src/index.js",
+  "main": "SaveMyPlants/LoginSignup/src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon"
