@@ -11,15 +11,15 @@ app.set("views")
 app.use(express.urlencoded({extended:false}))
 
 
-app.get("/login.html",(res)=>{
+app.get("login.html",(res)=>{
     res.render("login")
 })
 
-app.get("/signup.html",(res)=>{
+app.get("signup.html",(res)=>{
     res.render("signup")
 })
 
-app.post("/signup.html", async(req, res)=>{
+app.post("signup.html", async(req, res)=>{
 
     const data={
         name:req.body.name,
@@ -27,14 +27,14 @@ app.post("/signup.html", async(req, res)=>{
         } 
 
     await collection.insertMany([data])
-    res.render("./main-index.html")    
+    res.render("main-index.html")    
 })
 
-app.post("/login.html", async(req, res)=>{
+app.post("login.html", async(req, res)=>{
     try{
        const check=await collection.findOne({name:req.body.name})
             if(check.password===req.body.password){
-                res.render("./main-index.html")
+                res.render("main-index.html")
             }
             else{
                 res.send("wrong password")
