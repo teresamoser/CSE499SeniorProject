@@ -28,7 +28,7 @@
 <body>
     <main>
         <header>
-            <h1 id="header">Log In Page</h1>
+            <h1 id="header">Sign Up Page</h1>
             <button id="button"></button>
             <nav> 
                 <ul class="menu">
@@ -47,28 +47,29 @@
                     <li title="Plant List">
                         <a href="plant-list.html" class="menu-item"> Plant List </a>
                     </li>
+                    <li title="Log In">
+                        <a href="login.html" class="menu-item"> Log In</a>
+                    </li>
                 </ul>
             </nav>
-                <p><img src="background-images/WetMyPlants.png" loading="lazy" width="400" height="200" alt="Wet My Plants"><br>
-            
+                <p><img src="background-images/welcomePlants.jpeg" loading="lazy" width="400" height="200" alt="Plant Studio"><br>
+                     <a href="login.html" class="login-button">Log In</a><br>
                 </p> 
         </header> 
     </main>
     
         <section id="join">
-            <h2>Log In</h2>
-            <form method="post" action="./main-index.html">
+            <h2>Sign Up</h2>
+            <form method="post" action="login.html">
                 <fieldset>
-                    <legend> LogIn Information</legend>
-                    <label class="top"> Name* <input type="text" name="name" required></label>
+                    <legend> Sign Up Information</legend>
+                    <label class="top"> Name* <input type="text" name="fname" required></label>
                     <label class="top"> Password* <input type="text" name="password" required></label>
                 </fieldset>
 
                 <input type="submit" value="Submit" class="submitBtn">
             </form>
-            <a href="signup.html">Don't have a Log in yet? Sign up here.</a>
         </section>
-        
    
         <footer>
             <p> &copy;

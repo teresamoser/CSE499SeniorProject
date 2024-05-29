@@ -1,26 +1,25 @@
 const express=require("express")
 const app=express()
-const path=require("path")
-const hbs=require("hbs")
+// const path=require("path")
 const collection=require("./mongodb")
 
-const templatePath=path.join(__dirname, '../templates')
+// const htmlPath=path.join(__dirname, './html')
 
 app.use(express.json())
-app.set("view engine","hbs")
-app.set("views", templatePath)
+app.set("view engine")
+app.set("views")
 app.use(express.urlencoded({extended:false}))
 
 
-app.get("/login",(res,req)=>{
+app.get("/login.html",(res)=>{
     res.render("login")
 })
 
-app.get("/signup",(res,req)=>{
+app.get("/signup.html",(res)=>{
     res.render("signup")
 })
 
-app.post("/signup", async(req, res)=>{
+app.post("/signup.html", async(req, res)=>{
 
     const data={
         name:req.body.name,
@@ -28,14 +27,14 @@ app.post("/signup", async(req, res)=>{
         } 
 
     await collection.insertMany([data])
-    res.render("/home")    
+    res.render("./main-index.html")    
 })
 
-app.post("/login", async(req, res)=>{
+app.post("/login.html", async(req, res)=>{
     try{
        const check=await collection.findOne({name:req.body.name})
             if(check.password===req.body.password){
-                res.render("/home")
+                res.render("./main-index.html")
             }
             else{
                 res.send("wrong password")

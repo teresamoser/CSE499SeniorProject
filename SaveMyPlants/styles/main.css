@@ -299,7 +299,7 @@ article.list {
 
 /* Login page css */
 /*  --FORM-- */
-#join h2{
+#join h2, #join a{
     font-family: Tahoma,Verdana, Geneva, sans-serif;
     font-size: 30px;
     text-align: center;
