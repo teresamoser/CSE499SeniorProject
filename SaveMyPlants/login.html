@@ -57,16 +57,17 @@
     
         <section id="join">
             <h2>Log In</h2>
-            <form method="post" action="./main-index.html">
+            <form method="post" action="login.html">
                 <fieldset>
                     <legend> LogIn Information</legend>
-                    <label class="top"> Name* <input type="text" name="name" required></label>
-                    <label class="top"> Password* <input type="text" name="password" required></label>
+                    <label class="top"> Name* <input placeholder="Name" type="name" name="name" required></label>
+                    <label class="top"> Password* <input placeholder="Password" type="password" name="password" required></label>
                 </fieldset>
 
-                <input type="submit" value="Submit" class="submitBtn">
+                <input type="submit" class="submitBtn">
             </form>
-            <a href="signup.html">Don't have a Log in yet? Sign up here.</a>
+            <h3>Don't have an account?</h3>
+            <a href="signup.html"> Create new account here.</a>
         </section>
         
    
@@ -86,6 +87,6 @@
         </footer> 
              <!---Javascript files-->
         <script src="scripts/plant-menu.js"></script> 
-        <script src="scripts/plant-list.js" ></script> 
+        <script src="scripts/plant-list.js" ></script>  
 </body>
 </html>

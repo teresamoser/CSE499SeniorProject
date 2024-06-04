@@ -15,18 +15,18 @@ const displayList = (PlantData) => {
       PlantData.forEach((PlantData) => {
 
           let card = document.createElement('section');
-          let imageUrl = document.createElement('img');
           let name = document.createElement('h2'); 
           let type= document.createElement('p');
           let water = document.createElement('p');
           let light = document.createElement('p');
+          let imageUrl = document.createElement('img');
           let group = document.createElement('p');
 
           name.textContent = `${PlantData.name}`;
-          type.innerHTML = `<strong>Type: </strong>: ${PlantData.type}`;
-          water.innerHTML = `<strong>Water: </strong>: ${PlantData.water}`;
-          light.innerHTML = `<strong>Light: </strong>: ${PlantData.light}`;
-          group.innerHTML = `<strong>Group: </strong>: ${PlantData.group}`;
+          type.innerHTML = `<strong>Type</strong>: ${PlantData.type}`;
+          water.innerHTML = `<strong>Water</strong>: ${PlantData.water}`;
+          light.innerHTML = `<strong>Light</strong>: ${PlantData.light}`;
+          group.innerHTML = `<strong>Group</strong>: ${PlantData.group}`;
 
           imageUrl.setAttribute('src', PlantData.image);
           imageUrl.setAttribute('alt', `logo ${PlantData.name}`); 
