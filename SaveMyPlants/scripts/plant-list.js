@@ -1,18 +1,34 @@
-const url = "data/PlantData.json"; 
+const url = "mongodb+srv://dbuser:dbuser@cluster0.0grlm01.mongodb.net/"; 
 const cards = document.querySelector('#cards');
+const express = require('express');
+const mongoose = require('mongoose');
+
+const app = express();
+app.use(express.json());
+
+// MongoDB Connection
+mongoose.connect('mongodb+srv://dbuser:dbuser@cluster0.0grlm01.mongodb.net/');
+const db = mongoose.connection;
+
+db.on('error', console.error.bind(console, 'connection error:'));
+db.once('open', function() {
+  console.log('Connected to MongoDB');
+});
+
+
 
 async function getListData() {
   const response = await fetch(url);
   const data = await response.json();
-  console.table[data.PlantData];
-  displayList[data.PlantData];
+  console.table[PD.PlantData];
+  displayList[PD.PlantData];
   };
 
 getListData();
 
-const displayList = (PlantData) => {
+const displayList = ([PlantData]) => {
  
-      PlantData.forEach((PlantData) => {
+      PlantData.forEach(PlantData => {
 
           let card = document.createElement('section');
           let name = document.createElement('h2'); 
