@@ -170,6 +170,10 @@ main section {
 p {
     font-size: large;
     }
+div.content{
+        width: auto;
+        float: right;
+    }
 .left-sidebar h2 {
     font-family: Tahoma,Verdana, Geneva, sans-serif;
     font-size: 30px;
@@ -192,8 +196,7 @@ p {
     background-color:#847678;;
     text-align: center;
     font-size: large;
-    margin-top: -8px;
-    height:max-content;
+    height: auto;
     }
 .counter {
     border-color:rgb(236, 225, 195);
@@ -364,11 +367,25 @@ form label.top input:required  {
 form label.top input:required:valid {
     border-left: green solid 6px;
     }
+.logout-button {
+        float: right;
+        background-color: #552523;
+        color: antiquewhite;
+        border: none;
+        padding: 14px 30px;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 22px;
+        transition: background-color 0.3s ease;
+        text-decoration: none;
+    }
 
+.logout-button:hover {
+        background-color: #686a65;
+    }
 /* Form and Login page end */
 
-
-/* Grouping visits per page */
+/* Schedule/Visits per page css */
 .counter {
     font-family: Tahoma,Verdana, Geneva, sans-serif;
     font-size: 30px;
@@ -379,9 +396,24 @@ form label.top input:required:valid {
     box-shadow: 0 6px 18px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     padding: 10px;
     border-radius: 25px;
+    width:fit-content;
+    grid-column: 1/2; 
     }
 p {
     margin: 1rem;
+    }
+.left{
+    font-family: Tahoma,Verdana, Geneva, sans-serif;
+    font-size: 30px;
+    text-align: center;
+    border-color: #5a0b0b;
+    background-color:#847678;
+    border-style: solid;
+    box-shadow: 0 6px 18px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding: 10px;
+    border-radius: 25px;
+    width:fit-content;
+    grid-column: 1; 
     }
 .label {
     font-family: Tahoma, Verdana, sans-serif;
@@ -392,7 +424,19 @@ p {
     font-weight: bolder;
     font-size: larger;
     }
-/* Grouping visits page ends  */
+div.group1{
+    grid-template-columns: auto;
+    grid-column: 1/2; 
+    }
+table, th, td {
+    border: 1px solid rgb(90, 7, 7) ;
+    color: black;
+    height: 50px;
+    width: 900px;
+    background-color:rgb(236, 225, 195);
+    grid-column: 2; 
+  }
+  /* Schedule/Visits end css */
 
 
 footer {

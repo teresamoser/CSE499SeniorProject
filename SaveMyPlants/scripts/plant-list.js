@@ -10,6 +10,7 @@ app.use(express.json());
 mongoose.connect('mongodb+srv://dbuser:dbuser@cluster0.0grlm01.mongodb.net/');
 const db = mongoose.connection;
 
+
 db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', function() {
   console.log('Connected to MongoDB');
