@@ -36,20 +36,6 @@ header img{
     width: 100%;
     height: auto;
     }
-.login-button{
-    display: block;
-    text-align: center;
-    margin: auto;
-    border: none;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    border-radius: 25px;
-    padding: 14px 28px;
-    width: 250px;
-    height: 50px;
-    cursor: pointer;
-    background-color:#A28F9D;
-    color:black;
-    }
 
 
 /* Menu code below */  
@@ -397,7 +383,7 @@ form label.top input:required:valid {
     padding: 10px;
     border-radius: 25px;
     width:fit-content;
-    grid-column: 1/2; 
+    display:inline-table;
     }
 p {
     margin: 1rem;
@@ -412,8 +398,8 @@ p {
     box-shadow: 0 6px 18px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     padding: 10px;
     border-radius: 25px;
-    width:fit-content;
-    grid-column: 1; 
+    width:min-content;
+    grid-column: 1/2; 
     }
 .label {
     font-family: Tahoma, Verdana, sans-serif;
@@ -423,18 +409,28 @@ p {
     color: rgb(90, 7, 7);
     font-weight: bolder;
     font-size: larger;
+
     }
-div.group1{
-    grid-template-columns: auto;
-    grid-column: 1/2; 
+#group1, #group2, #group3{
+    display: grid;
+    grid-column: 1 / 2 ;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    padding: .5rem;
+    min-width: auto;
+    background-color: #563635 ;
+    color: #000;      
+    margin: auto;
     }
-table, th, td {
-    border: 1px solid rgb(90, 7, 7) ;
+#water {
+    float: right;
+    }
+.table, th, td {
+    border: 1px solid rgb(90, 7, 7);
     color: black;
     height: 50px;
-    width: 900px;
+    width: 840px;
     background-color:rgb(236, 225, 195);
-    grid-column: 2; 
+    grid-column: 2 / 2; 
   }
   /* Schedule/Visits end css */
 

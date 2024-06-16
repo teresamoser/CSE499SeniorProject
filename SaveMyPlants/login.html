@@ -28,10 +28,10 @@
 <body>
     <main>
         <header>
-            <h1 id="header">Plant List</h1>
+            <h1 id="header">Log In Page</h1>
             <button id="button"></button>
-             <nav> 
-                 <ul class="menu">
+            <nav> 
+                <ul class="menu">
                     <li title="home">
                         <a href="main-index.html" id="menu-button"> Home </a>
                     </li>
@@ -44,30 +44,56 @@
                     <li title="Grouping">
                         <a href="grouping.html" class="menu-item"> Grouping </a>
                     </li>
+                    <li title="Plant List">
+                        <a href="plant-list.html" class="menu-item"> Plant List </a>
+                    </li>
                 </ul>
             </nav>
-                <p><img src="background-images/plantsInLight.png" loading="lazy" width="300" height="150" alt="Plant Studio"><br>
+                <p><img src="background-images/WetMyPlants.jpeg" loading="lazy" width="400" height="200" alt="Wet My Plants"><br>
             
                 </p> 
         </header> 
-        <div id="business">
-            <h1 id="title">Plant List</h1>
-                <div id="directory">
-                    <button id="grid"> 🔠 Grid </button>
-                    <button id="list"> 📋 List </button>
-                </div>
-                <article class="grid">  
-                    <div id="cards"></div> 
-                </article>
-        </div>
     </main>
+    
+        <section id="join">
+            <h2>Log In</h2>
+            <form method="post" action="login.html">
+                <fieldset>
+                    <legend> LogIn Information</legend>
+                    <label class="top"> Username: <input type="name" name="name" required></label>
+                    <label class="top"> Password: <input type="password" name="password" required></label>
+                </fieldset>
+
+                <input type="submit" id="submit" value="submit" class="submitBtn">
+            </form>
+            <h3>Don't have an account?</h3>
+            <a href="signup.html"> Don't have an account? Register.</a>
+
+            <script>
+                document.addEventListener('DOMContentLoaded', function () {
+                    const form = document.querySelector('form');
+                    const passwordInput = document.getElementById('password');
+            
+                    form.addEventListener('submit', function (event) {
+                        const password = passwordInput.value;
+                        
+                        if (password.length < 7) {
+                            event.preventDefault();
+                            alert('Password must be at least 7 characters long.');
+                        }
+                    });
+                });
+            </script>
+        </section>
+        
+   
         <footer>
             <p> &copy;
                 <script>document.write(new Date().getFullYear())</script>
                 Save My Plants<br>
-                Teresa Moser <br>
-                CSE 499 Senior Project 
+                Teresa Moser CSE 499 Senior Project
             </p>
+
             <p class="highlight" id="lastModified">
                 <script>
                 const date = new Date(document.lastModified);
@@ -75,8 +101,9 @@
                 </script>
             </p>
         </footer> 
-             <!-- Javascript files -->
-             <script src="scripts/plant-menu.js"></script> 
-             <script src="scripts/plant-list.js" ></script>
+             <!---Javascript files-->
+        <script src="scripts/plant-menu.js"></script> 
+        <script src="scripts/plant-list.js" ></script> 
+        <script src="scripts/index.js" ></script>  
 </body>
 </html>

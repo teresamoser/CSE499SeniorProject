@@ -1,11 +1,11 @@
-[
+{"PlantData": [
     {
       "id":"1",
       "name":"Rex Begonia",
       "type":"Herbaceous, perennial",
       "water":"Water every 4-7 days when top 1 inch of soil is dry. Keep soil moist but not soggy.",
       "light":"Medium indirect sunlight or 8-10 hours under grow lights.",
-      "imageUrl":"https://github.com/teresamoser/WDD430--W24/blob/main/FinalProject/src/app/Plant%20Images/RexBegonia.jpg ",
+      "imageUrl":"./images/RexBegonia.jpg ",
       "group":"null"
     },
     {
@@ -14,7 +14,7 @@
       "type":"Herbaceous, perennial",
       "water":"Water twice a week and only if the top 1/2 inch of the soil is dry; never overwater this plant.",
       "light":"Give the plant partial or indirect sunlight.",
-      "imageUrl":"https://github.com/teresamoser/WDD430--W24/blob/main/FinalProject/src/app/Plant%20Images/PolkaDotBegonia.jpg ",
+      "imageUrl":"./images/PolkaDotBegonia.jpg ",
       "group":"null"
     },
     {
@@ -23,7 +23,7 @@
       "type":"Herbaceous, perennial",
       "water":"Water once a week",
       "light":"Bright to medium indirect sunlight.",
-      "imageUrl":"https://github.com/teresamoser/WDD430--W24/blob/main/FinalProject/src/app/Plant%20Images/PrayerPlant.jpg ",
+      "imageUrl":"./images/PrayerPlant.jpg ",
       "group":"null"
     },
     {
@@ -32,7 +32,7 @@
       "type":"Perennial, rhizome",
       "water":"Give plants ample water and mist the rhizomes daily if not grown in a humid room.",
       "light":"No direct sunlight, dappled light or partial shade conditions.",
-      "imageUrl":"https://github.com/teresamoser/WDD430--W24/blob/main/FinalProject/src/app/Plant%20Images/BlackFootedRabbitFern.jpg ",
+      "imageUrl":"./images/BlackFootedRabbitFern.jpg ",
       "group":"null"
     },
     {
@@ -41,7 +41,7 @@
       "type":"Herbaceous, perennial",
       "water":"Water only when top 5cm of soil/mix is dry.",
       "light":"Good ambient light; avoid direct sun through glass; tolerates medium shade.",
-      "imageUrl":"https://github.com/teresamoser/WDD430--W24/blob/main/FinalProject/src/app/Plant%20Images/FlamingoLily.jpg ",
+      "imageUrl":"./images/FlamingoLily.jpg ",
       "group":"null"
     },
     {
@@ -50,7 +50,7 @@
       "type":"Herbaceous, perennial",
       "water":"Let the top 2-4 inches of soil dry out in between waterings",
       "light":"Bright and indirect light for 6-8 hours daily.",
-      "imageUrl":"https://github.com/teresamoser/WDD430--W24/blob/main/FinalProject/src/app/Plant%20Images/GuianaChestnut.jpg ",
+      "imageUrl":"./images/GuianaChestnut.jpg ",
       "group":"null"
     },
     {
@@ -59,7 +59,7 @@
       "type":"Vine",
       "water":"Moist, but well-drained",
       "light":"Keep the plant in bright but diffused light.",
-      "imageUrl":"https://github.com/teresamoser/WDD430--W24/blob/main/FinalProject/src/app/Plant%20Images/ArrowheadVine.jpg",
+      "imageUrl":"./images/ArrowheadVine.jpg",
       "group":"null"
     },
     {
@@ -68,7 +68,7 @@
       "type":"Herbaceous, perennial",
       "water":"Water colorful aglaonema when the soil dries out.",
       "light":"Grow colorful aglaonema in low, medium, or bright light.",
-      "imageUrl":"https://github.com/teresamoser/WDD430--W24/blob/main/FinalProject/src/app/Plant%20Images/ChineseEvergreen.jpg",
+      "imageUrl":"./images/ChineseEvergreen.jpg",
       "group":"null"
     },
     {
@@ -77,7 +77,7 @@
       "type":"Perennial",
       "water":"Pot with plenty of drainage holes combined with regular waterings.",
       "light":"Shade-loving, Don't let the sun's rays touch the foliage.",
-      "imageUrl":"https://github.com/teresamoser/WDD430--W24/blob/main/FinalProject/src/app/Plant%20Images/PinkPrincess.jpg ",
+      "imageUrl":"./images/PinkPrincess.jpg ",
       "group":"null"
     },
     {
@@ -86,7 +86,7 @@
       "type":"Tropical perennial",
       "water":"Let soil dry out completely in between waterings. A deep watering once every few weeks.",
       "light":"Bright to low indirect light.",
-      "imageUrl":"https://github.com/teresamoser/WDD430--W24/blob/main/FinalProject/src/app/Plant%20Images/ZZPlant.jpg ",
+      "imageUrl":"./images/ZZPlant.jpg ",
       "group":"null"
     },
     {
@@ -95,7 +95,7 @@
       "type":"Tropical perennial",
       "water":"Moist but not soggy.",
       "light":"Part-shade or dappled sun location.",
-      "imageUrl":"https://github.com/teresamoser/WDD430--W24/blob/main/FinalProject/src/app/Plant%20Images/ElephantEar.jpg ",
+      "imageUrl":"./images/ElephantEar.jpg ",
       "group":"null"
     },
     {
@@ -104,7 +104,7 @@
       "type":"Broadleaf Evergreen",
       "water":"Water regularly during their growing season.",
       "light":"Full sun to partial shade",
-      "imageUrl":"https://github.com/teresamoser/WDD430--W24/blob/main/FinalProject/src/app/Plant%20Images/DragonTree.jpg ",
+      "imageUrl":"./images/DragonTree.jpg",
       "group":"null"
     },
     {
@@ -113,7 +113,7 @@
       "type":"Perennial, evergreen climbing vine",
       "water":"Evenly moist but not soggy soil.",
       "light":"Bright, indirect light.",
-      "imageUrl":"https://github.com/teresamoser/WDD430--W24/blob/main/FinalProject/src/app/Plant%20Images/EnglishIvy.jpg ",
+      "imageUrl":"./images/EnglishIvy.jpg",
       "group":"null"
     },
     {
@@ -122,7 +122,7 @@
       "type":"Perennial",
       "water":"Moist but well-drained.",
       "light":"Bright, indirect light.",
-      "imageUrl":"https://github.com/teresamoser/WDD430--W24/blob/main/FinalProject/src/app/Plant%20Images/RattlesnakePlant.jpg ",
+      "imageUrl":"./images/RattlesnakePlant.jpg ",
       "group":"null"
     },
     {
@@ -131,7 +131,7 @@
       "type":"Vine, perennial",
       "water":"Moist but well-drained.",
       "light":"Dappled, partial, full sunlight.",
-      "imageUrl":"https://github.com/teresamoser/WDD430--W24/blob/main/FinalProject/src/app/Plant%20Images/CreepingFig.jpg ",
+      "imageUrl":"./images/CreepingFig.jpg",
       "group":"null"
     },
     {
@@ -140,7 +140,7 @@
       "type":"Rhizomes",
       "water":"Water your fern at least once a week to ensure that the soil stays consistently moist.",
       "light":"Medium, indirect light.",
-      "imageUrl":"https://github.com/teresamoser/WDD430--W24/blob/main/FinalProject/src/app/Plant%20Images/LemonDropFern.jpg ",
+      "imageUrl":"./images/LemonDropFern.jpg",
       "group":"null"
     },
     {
@@ -149,7 +149,7 @@
       "type":"Tropical Perennial",
       "water":"Keep the soil consistently moist but not soggy.",
       "light":"Bright, indirect light.",
-      "imageUrl":"https://github.com/teresamoser/WDD430--W24/blob/main/FinalProject/src/app/Plant%20Images/PeaceLily.jpg ",
+      "imageUrl":"./images/PeaceLily.jpg ",
       "group":"null"
     },
     {
@@ -158,8 +158,9 @@
       "type":"Houseplant, Perennial",
       "water":"Keep the soil consistently moist but not soggy.",
       "light":"Part sun to full sun.",
-      "imageUrl":"https://github.com/teresamoser/WDD430--W24/blob/main/FinalProject/src/app/Plant%20Images/FlamingCroton.jpg ",
+      "imageUrl":"./images/FlamingCroton.jpg",
       "group":"null"
     } 
   ]
+}
   
