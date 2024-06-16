@@ -1,20 +1,20 @@
-// const express = require('express');
-// const mongoose = require('mongoose');
+const express = require('express');
+const mongoose = require('mongoose');
 
-// const app = express();
-// app.use(express.json());
+const app = express();
+app.use(express.json());
 
 // MongoDB Connection
-// mongoose.connect('mongodb+srv://dbuser:dbuser@cluster0.0grlm01.mongodb.net/');
-// const db = mongoose.connection;
+mongoose.connect('mongodb+srv://dbuser:dbuser@cluster0.0grlm01.mongodb.net/');
+const db = mongoose.connection;
 
 
-// db.on('error', console.error.bind(console, 'connection error:'));
-// db.once('open', function() {
-//   console.log('Connected to MongoDB');
-// });
+db.on('error', console.error.bind(console, 'connection error:'));
+db.once('open', function() {
+  console.log('Connected to MongoDB');
+});
 
-const url = "data/PlantData.json";
+const url = "mongodb://localhost:27017/PD.PlantData";
 const cards = document.querySelector('#cards');
 
 async function getDirectoryData() {
