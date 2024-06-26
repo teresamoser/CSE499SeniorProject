@@ -1,41 +1,45 @@
-const url = "data/PlantData.json";
+// Frontend JavaScript
+const apiEndpoint = 'http://localhost:3001/api/plants'; // Replace with your server's API endpoint
+
 const cards = document.querySelector('#cards');
 
 async function getDirectoryData() {
-  const response = await fetch(url);
-  const data = await response.json();
-  console.table(data.PlantData);
-  displayDirectory(data.PlantData);
-  };
+  try {
+    const response = await fetch(apiEndpoint);
+    const data = await response.json();
+    console.table(data); // Log retrieved data to console
+    displayDirectory(data); // Display the retrieved data
+  } catch (error) {
+    console.error('Error fetching data:', error);
+  }
+}
 
 getDirectoryData();
 
-const displayDirectory = (PlantData) => {
- 
-  PlantData.forEach((PlantData) => {
-
+const displayDirectory = (data) => {
+  data.forEach((plant) => {
     let card = document.createElement('section');
     let icon = document.createElement('img');
-    let name = document.createElement('h2'); 
-    let type= document.createElement('p');
+    let name = document.createElement('h2');
+    let type = document.createElement('p');
     let water = document.createElement('p');
-    let light= document.createElement('p');
+    let light = document.createElement('p');
     let group = document.createElement('p');
 
-    name.textContent = `${PlantData.name}`;
-    type.innerHTML = `<strong>Type: </strong>: ${PlantData.type}`;
-    water.innerHTML = `<strong>Water: </strong>: ${PlantData.water}`;
-    light.innerHTML = `<strong>Light: </strong>: ${PlantData.light}`;
-    group.innerHTML = `<strong>Group: </strong>: ${PlantData.group}`;
+    name.textContent = `${plant.name}`;
+    type.innerHTML = `<strong>Type: </strong>: ${plant.type}`;
+    water.innerHTML = `<strong>Water: </strong>: ${plant.water}`;
+    light.innerHTML = `<strong>Light: </strong>: ${plant.light}`;
+    group.innerHTML = `<strong>Group: </strong>: ${plant.group}`;
 
-    icon.setAttribute('src', PlantData.imageUrl);
-    icon.setAttribute('alt', `logo ${PlantData.name}`); 
+    icon.setAttribute('src', plant.imageUrl);
+    icon.setAttribute('alt', `logo ${plant.name}`);
     icon.setAttribute('loading', 'lazy');
     icon.setAttribute('width', '200');
     icon.setAttribute('height', '200');
 
     card.appendChild(icon);
-    card.appendChild(name); 
+    card.appendChild(name);
     card.appendChild(type);
     card.appendChild(water);
     card.appendChild(light);
@@ -44,20 +48,18 @@ const displayDirectory = (PlantData) => {
     cards.appendChild(card);
   });
 
-  console.log([PlantData]);
+  const gridButton = document.querySelector("#grid");
+  const listButton = document.querySelector("#list");
+  const displayContainer = document.querySelector("article");
 
-    const gridbutton = document.querySelector("#grid");
-    const listbutton = document.querySelector("#list");
-    const display = document.querySelector("article");
+  gridButton.addEventListener("click", () => {
+    displayContainer.classList.add("grid");
+    displayContainer.classList.remove("list");
+  });
 
-    gridbutton.addEventListener("click", () => {
-      display.classList.add("grid");
-      display.classList.remove("list");
-    });
-
-    listbutton.addEventListener("click", showList); 
-    function showList() {
-      display.classList.add("list");
-      display.classList.remove("grid");
-    }
+  listButton.addEventListener("click", showList);
+  function showList() {
+    displayContainer.classList.add("list");
+    displayContainer.classList.remove("grid");
   }
+};
