@@ -1,28 +1,11 @@
+// routes/plants.js
+
 const express = require('express');
-const mongoose = require('mongoose');
-const cors = require('cors');
-const Plant = require('./models/plantModel');
-const plantRouter = require('./routes/plants');
-
-const app = express();
-const PORT = process.env.PORT || 3002;
-
-// Middleware
-app.use(cors());
-app.use(express.json());
-
-// Connect to MongoDB
-const MONGODB_URI = 'mongodb+srv://dbuser:dbuser@cluster0.0grlm01.mongodb.net/plants'; // Replace with your MongoDB URI
-mongoose.connect(MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true });
-const db = mongoose.connection;
-db.on('error', console.error.bind(console, 'MongoDB connection error:'));
-db.once('open', () => console.log('Connected to MongoDB'));
-
-// Routes
-app.use('/api/routes/plants', plantRouter);
+const router = express.Router();
+const Plant = require('../models/plantModel');
 
 // GET all plants
-app.get('/api/routes/plants', async (req, res) => {
+router.get('/', async (req, res) => {
   try {
     const plants = await Plant.find();
     res.json(plants);
@@ -33,7 +16,7 @@ app.get('/api/routes/plants', async (req, res) => {
 });
 
 // GET single plant by ID
-app.get('/api/routes/plants/:id', async (req, res) => {
+router.get('/:id', async (req, res) => {
   try {
     const plant = await Plant.findById(req.params.id);
     if (!plant) {
@@ -47,7 +30,7 @@ app.get('/api/routes/plants/:id', async (req, res) => {
 });
 
 // POST create a new plant
-app.post('/api/routes/plants', async (req, res) => {
+router.post('/', async (req, res) => {
   try {
     const newPlant = await Plant.create(req.body);
     res.status(201).json(newPlant);
@@ -58,7 +41,7 @@ app.post('/api/routes/plants', async (req, res) => {
 });
 
 // PUT update a plant by ID
-app.put('/api/routes/plants/:id', async (req, res) => {
+router.put('/:id', async (req, res) => {
   try {
     const updatedPlant = await Plant.findByIdAndUpdate(req.params.id, req.body, { new: true });
     if (!updatedPlant) {
@@ -72,7 +55,7 @@ app.put('/api/routes/plants/:id', async (req, res) => {
 });
 
 // DELETE delete a plant by ID
-app.delete('/api/routes/plants/:id', async (req, res) => {
+router.delete('/:id', async (req, res) => {
   try {
     const deletedPlant = await Plant.findByIdAndDelete(req.params.id);
     if (!deletedPlant) {
@@ -85,7 +68,4 @@ app.delete('/api/routes/plants/:id', async (req, res) => {
   }
 });
 
-// Start server
-app.listen(PORT, () => {
-  console.log(`Server is running on http://localhost:${PORT}`);
-});
+module.exports = router;

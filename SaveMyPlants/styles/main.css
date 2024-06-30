@@ -234,7 +234,6 @@ div.content{
     padding: 10px;
     font-weight: 700;
     font-size: 30px;
-
     }
 #directory button:hover , #directory button:focus {
     background-color: #E4E6C3;
@@ -283,6 +282,28 @@ article.list {
     font-size: 1rem;
     font-family: Tahoma, Helvetica, sans-serif;
     }
+/* styles.css */
+
+/* Plant card styles */
+  
+  /* Image styles */
+  img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  /* Button styles */
+  button {
+    padding: 8px 16px;
+    border: none;
+    background-color: #5a0b0b;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
 /* Plant-List page end */
 
 
