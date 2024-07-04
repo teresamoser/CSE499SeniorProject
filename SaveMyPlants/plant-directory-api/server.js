@@ -5,7 +5,7 @@ const Plant = require('./models/plantModel');
 const plantRouter = require('./routes/plants');
 
 const app = express();
-const PORT = process.env.PORT || 3002;
+const PORT = process.env.PORT || 3005;
 
 // Middleware
 app.use(cors());

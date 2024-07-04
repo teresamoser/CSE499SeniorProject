@@ -148,10 +148,10 @@ main section {
   border-style: solid;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   border-radius: 25px;
-  top: 100px; 
+  /* top: 100px; 
   left: 50px; 
   width: 50%;
-  height: auto;
+  height: auto; */
   }
 p {
   font-size: large;
@@ -236,7 +236,7 @@ div.content{
   font-size: 30px;
   }
 #directory button:hover , #directory button:focus {
-  background-color: #E4E6C3;
+  background-color: #d4d6ad;
   cursor: pointer;
   }
 .grid section {
@@ -287,11 +287,11 @@ article.list {
 /* Plant card styles */
 
 /* Image styles */
-img {
-  max-width: 100%;
-  height: auto;
+/* img {
+  max-width: 50%;
+  height: 50%;
   border-radius: 8px;
-}
+} */
 
 /* Button styles */
 button {

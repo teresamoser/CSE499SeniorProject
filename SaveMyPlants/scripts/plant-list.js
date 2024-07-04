@@ -1,5 +1,5 @@
 // Frontend JavaScript
-const apiEndpoint = 'http://localhost:3002/api/routes/plants'; // Replace with your server's API endpoint
+const apiEndpoint = 'http://localhost:3005/api/routes/plants'; // Replace with your server's API endpoint
 
 const cards = document.querySelector('#cards');
 
