@@ -5,7 +5,7 @@ const Plant = require('./models/plantModel');
 const plantRouter = require('./routes/plants');
 
 const app = express();
-const PORT = process.env.PORT || 3005;
+const PORT = process.env.PORT;
 
 // Middleware
 app.use(cors());
@@ -19,7 +19,7 @@ db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 db.once('open', () => console.log('Connected to MongoDB'));
 
 // Routes
-app.use('/api/routes/plants', plantRouter);
+app.use('/plant-directory-api/routes/plants.js', plantRouter);
 
 // GET all plants
 app.get('/api/routes/plants', async (req, res) => {
