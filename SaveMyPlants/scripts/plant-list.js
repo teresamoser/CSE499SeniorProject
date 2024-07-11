@@ -1,5 +1,8 @@
 const apiEndpoint = 'http://localhost:3000/api/plants'; // Adjust this to your server's actual API endpoint
 const cards = document.querySelector('#cards');
+const editPlantModal = document.getElementById('editPlantModal');
+const editPlantForm = document.getElementById('editPlantForm');
+const closeModal = document.querySelector('.close');
 
 async function getDirectoryData() {
   try {
@@ -87,7 +90,59 @@ async function deletePlant(id) {
 }
 
 function editPlant(plant) {
-  // Implement the logic to open a form/modal for editing
-  // For example, populate a form with the plant's current data and allow the user to submit changes
-  console.log('Editing plant:', plant);
+  // Populate the form with the plant's current data
+  document.getElementById('editName').value = plant.name;
+  document.getElementById('editType').value = plant.type;
+  document.getElementById('editWater').value = plant.water;
+  document.getElementById('editLight').value = plant.light;
+  document.getElementById('editGroup').value = plant.group;
+  document.getElementById('editImageUrl').value = plant.imageUrl;
+  document.getElementById('editPlantId').value = plant._id;
+
+  // Display the modal
+  editPlantModal.style.display = "block";
 }
+
+// Close the modal when the user clicks on <span> (x)
+closeModal.onclick = function() {
+  editPlantModal.style.display = "none";
+}
+
+// Close the modal when the user clicks anywhere outside of the modal
+window.onclick = function(event) {
+  if (event.target == editPlantModal) {
+    editPlantModal.style.display = "none";
+  }
+}
+
+// Handle form submission
+editPlantForm.addEventListener('submit', async (event) => {
+  event.preventDefault();
+
+  const updatedPlant = {
+    name: document.getElementById('editName').value,
+    type: document.getElementById('editType').value,
+    water: document.getElementById('editWater').value,
+    light: document.getElementById('editLight').value,
+    group: document.getElementById('editGroup').value,
+    imageUrl: document.getElementById('editImageUrl').value,
+  };
+
+  const plantId = document.getElementById('editPlantId').value;
+
+  try {
+    const response = await fetch(`${apiEndpoint}/${plantId}`, {
+      method: 'PUT',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(updatedPlant),
+    });
+    const data = await response.json();
+    console.log('Plant updated:', data);
+    editPlantModal.style.display = "none"; // Close the modal
+    getDirectoryData(); // Refresh the directory after updating
+  } catch (error) {
+    console.error('Error updating plant:', error);
+  }
+});
