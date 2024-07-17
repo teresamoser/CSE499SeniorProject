@@ -52,14 +52,23 @@
     </main>
     <div class="group2">
         <section class="content">
-            <div>
+            <div id="groupHeader">
                 <h2>Benefits to Grouping Your Plants</h2>
                     <img src="background-images/plantGroupingBenefits.jpeg" loading="lazy" width="600" height="400" alt="Plant Grouping"><br>
                         <p> To get your plants to grow better you can place certain plants by each other.</p><br>
             </div>
         </section>
+        <br>
+        <div class="group3">
+            <section class="content">
+                <div>
+                    <h2>Plant Directory</h2>
+                    <ul id="plantList"></ul>
+                </div>
 
-        <section class="left">
+            </section>
+        </div>  
+        <section class="type">
             <div>
                 <h3>Types of Plants</h3>
                     <br>
@@ -68,9 +77,8 @@
             </div>
         </section>
         <br>
-        <section class="left">
+        <section class="benefit">
             <div>
-                
                 <h3>Plant Benefits</h3>
                 <br>
                     <img src="background-images/air-cleaning-houseplants.jpeg" loading="lazy" width="375" height="325" alt=" ">
@@ -79,6 +87,7 @@
         </section>
 
     </div>
+
         <footer>
             <p> &copy;
                 <script>document.write(new Date().getFullYear())</script>
@@ -86,16 +95,16 @@
                 Teresa Moser <br>
                 CSE 499 Senior Project
             </p>
-
             <p class="highlight" id="lastModified">
                 <script>
                 const date = new Date(document.lastModified);
                 document.getElementById("lastModified").innerHTML = date; 
                 </script>
             </p>
-        </footer> 
+        </footer>
              <!-- Javascript files -->
              <script src="scripts/plant-menu.js"></script> 
              <script src="scripts/plant-list.js" ></script> 
-</body>
+             <script src="groupApp.js"></script>
+    </body>
 </html>

@@ -29,41 +29,6 @@
     <main>
         <header>
             <h1 id="header">Plant List</h1>
-            <style>
-                /* Add your existing styles here */
-                .modal {
-                  display: none;
-                  position: fixed;
-                  z-index: 1;
-                  left: 0;
-                  top: 0;
-                  width: 100%;
-                  height: 100%;
-                  overflow: auto;
-                  background-color: rgb(0,0,0);
-                  background-color: rgba(0,0,0,0.4);
-                  padding-top: 60px;
-                }
-                .modal-content {
-                  background-color: #fefefe;
-                  margin: 5% auto;
-                  padding: 20px;
-                  border: 1px solid #888;
-                  width: 80%;
-                }
-                .close {
-                  color: #aaa;
-                  float: right;
-                  font-size: 28px;
-                  font-weight: bold;
-                }
-                .close:hover,
-                .close:focus {
-                  color: black;
-                  text-decoration: none;
-                  cursor: pointer;
-                }
-              </style>
             <button id="button"></button>
              <nav> 
                  <ul class="menu">
@@ -90,6 +55,7 @@
                 <div id="directory">
                     <button id="grid"> 🔠 Grid </button>
                     <button id="list"> 📋 List </button>
+                    <button id="addPlant"> 🪴 Add</button> <!-- Add Plant Button -->
                 </div>
                 <article class="grid">  
                     <div id="cards"></div> 
@@ -117,6 +83,30 @@
                     <button type="submit">Save Changes</button>
                 </form>
                 </div>
+                
+                 <!-- Add Plant Modal -->
+            <div id="addPlantModal" class="modal">
+                <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Add Plant</h2>
+                <form id="addPlantForm">
+                    <label for="name">Name:</label>
+                    <input type="text" id="editName" name=" "><br>
+                    <label for="type">Type:</label>
+                    <input type="text" id="editType" name=" "><br>
+                    <label for="water">Water:</label>
+                    <input type="text" id="editWater" name=" "><br>
+                    <label for="light">Light:</label>
+                    <input type="text" id="editLight" name=" "><br>
+                    <label for="group">Group:</label>
+                    <input type="text" id="editGroup" name=" "><br>
+                    <label for="imageUrl">Image URL:</label>
+                    <input type="text" id="editImageUrl" name=" "><br>
+                    <input type="hidden" id="editPlantId" name=" ">
+                    <button type="submit">Save Changes</button>
+                </form>
+                </div>
+            </div>   
             </div>   
         </div>
     </main>

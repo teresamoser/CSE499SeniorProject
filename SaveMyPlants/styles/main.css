@@ -141,9 +141,17 @@ main section {
     box-shadow: 0 6px 18px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     padding: 10px;
     border-radius: 25px;
-}
+    }
+
+section.content {
+    float: center;
+    background-color: #847678;
+    border-radius: 25px;    
+    }
+
 .content img{
     display: flex;
+    margin-left: 25%;
     border-color:rgb(236, 225, 195);
     border-style: solid;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -153,9 +161,11 @@ main section {
     width: 50%;
     height: auto;
     }
+
 p {
     font-size: large;
     }
+
 div.content{
         width: auto;
         float: right;
@@ -170,7 +180,7 @@ div.content{
     box-shadow: 0 6px 18px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     padding: 10px;
     border-radius: 25px;
-}
+    }
 .left-sidebar img {
     border-color:rgb(236, 225, 195);
     border-style: solid;
@@ -181,9 +191,33 @@ div.content{
     float: left;
     background-color:#847678;;
     text-align: center;
-    font-size: large;
-    height: auto;
+    font-size: medium;
+    width: 350px;
+    position:relative;
+    border-radius: 25px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     }
+section.type {
+    min-height: 30vh;
+    max-height: auto;
+    position: absolute;
+    display: flex;
+    top: 110vh;
+    background-color:#847678;
+    border-radius: 25px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+section.benefit{
+    min-height: 30vh;
+    position: absolute;
+    display: flex;
+    top: 190vh;
+    background-color:#847678;
+    border-radius: 25px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+
 .counter {
     border-color:rgb(236, 225, 195);
     border-style: solid;
@@ -191,6 +225,7 @@ div.content{
     border-radius: 25px;
     text-align: center;
     }
+
 /* Grouping page css  end */
 
 
@@ -430,8 +465,8 @@ p {
     color: rgb(90, 7, 7);
     font-weight: bolder;
     font-size: larger;
-
     }
+
 #group1, #group2, #group3{
     display: grid;
     grid-column: 1 / 2 ;
@@ -455,12 +490,50 @@ p {
   }
   /* Schedule/Visits end css */
 
+/* ADD/EDIT modal styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: #899878;
+    background-color: rgba(0,0,0,0.4);
+    padding-top: 60px;
+  }
+  .modal-content {
+    background-color: antiquewhite;
+    margin: 5% auto;
+    padding: 20px;
+    border: 10px solid #888;
+    width: 80%;
+  }
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  .close:hover, .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+
 
 footer {
     background: #222725;
     color: #f2f4f3;
-    padding: 2rem;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 25px;
+    background-color:#899878;
+    position: flex;
+    width: 100%;
     text-align: center;
-    grid-column: 1/3 ;
+   
     }
   
