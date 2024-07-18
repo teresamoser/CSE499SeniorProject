@@ -61,13 +61,29 @@
         <br>
         <div class="group3">
             <section class="content">
-                <div>
-                    <h2>Plant Directory</h2>
+                <div class="directory">
+                    <h2>Plant Groups</h2>
                     <ul id="plantList"></ul>
+                    <br>
+                    
                 </div>
 
             </section>
-        </div>  
+        </div>
+    <script>
+        // Fetch plants data from the server
+        fetch('/api/plants/name-group')
+            .then(response => response.json())
+            .then(plants => {
+                const plantsList = document.getElementById('plants-list');
+                plants.forEach(plant => {
+                    const li = document.createElement('li');
+                    li.textContent = `${plant.name} (${plant.group})`;
+                    plantsList.appendChild(li);
+                });
+            })
+            .catch(error => console.error('Error fetching plants:', error));
+    </script>
         <section class="type">
             <div>
                 <h3>Types of Plants</h3>
@@ -105,6 +121,6 @@
              <!-- Javascript files -->
              <script src="scripts/plant-menu.js"></script> 
              <script src="scripts/plant-list.js" ></script> 
-             <script src="groupApp.js"></script>
+             <script src="scripts/groupApp.js"></script>
     </body>
 </html>
