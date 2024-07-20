@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-const apiEndpoint = 'http://localhost:3000/api/plants'; // Adjust this to your server's actual API endpoint
+const apiEndpoint = 'http://localhost:3000/routes/plants'; // Adjust this to your server's actual API endpoint
 const cards = document.querySelector('#cards');
 const editPlantModal = document.getElementById('editPlantModal');
 const editPlantForm = document.getElementById('editPlantForm');
@@ -7,10 +7,23 @@ const closeModal = document.querySelector('.close');
 const addPlantButton = document.getElementById('addPlant');
 const modalTitle = document.getElementById('modalTitle');
 
+// async function getDirectoryData() {
+//   try {
+//     const response = await fetch(apiEndpoint);
+//     const data = await response.json();
+//     console.table(data);
+//     displayDirectory(data);
+//   } catch (error) {
+//     console.error('Error fetching data:', error);
+//   }
+// }
+
 async function getDirectoryData() {
   try {
     const response = await fetch(apiEndpoint);
-    const data = await response.json();
+    const text = await response.text(); // Get the raw response text
+    console.log('Raw response text:', text); // Log the raw response text to the console
+    const data = text ? JSON.parse(text) : []; // Parse JSON if not empty, otherwise set to an empty array
     console.table(data);
     displayDirectory(data);
   } catch (error) {
@@ -79,16 +92,30 @@ const displayDirectory = (PlantData) => {
   }
 }
 
+// async function deletePlant(id) {
+//   try {
+//     const response = await fetch(`${apiEndpoint}/${id}`, {
+//       method: 'DELETE',
+//     });
+//     const data = await response.json();
+//     console.log('Plant deleted:', data);
+//     getDirectoryData(); // Refresh the directory after deleting
+//   } catch (error) {
+//     console.error('Error deleting plant:', error);
+//   }
+// }
+
 async function deletePlant(id) {
   try {
     const response = await fetch(`${apiEndpoint}/${id}`, {
       method: 'DELETE',
     });
-    const data = await response.json();
+    const text = await response.text(); // Get the raw response text
+    const data = text ? JSON.parse(text) : {}; // Parse JSON if not empty, otherwise set to an empty object
     console.log('Plant deleted:', data);
     getDirectoryData(); // Refresh the directory after deleting
   } catch (error) {
-    console.error('Error deleting plant:', error);
+    console.error('Error deleting plant:', JSON.stringify(error));
   }
 }
 
@@ -152,23 +179,41 @@ editPlantForm.addEventListener('submit', async (event) => {
   const method = plantId ? 'PUT' : 'POST';
   const endpoint = plantId ? `${apiEndpoint}/${plantId}` : apiEndpoint;
 
-  try {
-    const response = await fetch(endpoint, {
-      method: method,
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(plantData),
-    });
-    const data = await response.json();
-    console.log(`Plant ${plantId ? 'updated' : 'added'}:`, data);
-    editPlantModal.style.display = "none"; // Close the modal
-    getDirectoryData(); // Refresh the directory after updating/adding
-  } catch (error) {
-    console.error(`Error ${plantId ? 'updating' : 'adding'} plant:`, error);
-  }
-});
+  // try {
+  //   const response = await fetch(endpoint, {
+  //     method: method,
+  //     headers: {
+  //       'Content-Type': 'application/json',
+  //     },
+  //     body: JSON.stringify(plantData),
+  //   });
+//     const data = await response.json();
+//     console.log(`Plant ${plantId ? 'updated' : 'added'}:`, data);
+//     editPlantModal.style.display = "none"; // Close the modal
+//     getDirectoryData(); // Refresh the directory after updating/adding
+//   } catch (error) {
+//     console.error(`Error ${plantId ? 'updating' : 'adding'} plant:`, error);
+//   }
+// });
 
+   try {
+      const response = await fetch(endpoint, {
+        method: method,
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(plantData),
+      });
+      const text = await response.text(); // Get the raw response text
+      console.log('Raw response text:', text); // Log the raw response text to the console
+      const data = text ? JSON.parse(text) : {}; // Parse JSON if not empty, otherwise set to an empty object
+      console.log(`Plant ${plantId ? 'updated' : 'added'}:`, data);
+      editPlantModal.style.display = "none"; // Close the modal
+      getDirectoryData(); // Refresh the directory after updating/adding
+    } catch (error) {
+      console.error(`Error ${plantId ? 'updating' : 'adding'} plant:`, error);
+    }
+  });
 // Add event listener to the "Add Plant" button
 addPlantButton.addEventListener('click', addPlant);
 });

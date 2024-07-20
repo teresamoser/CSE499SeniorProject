@@ -65,7 +65,7 @@
             <div id="editPlantModal" class="modal">
                 <div class="modal-content">
                 <span class="close">&times;</span>
-                <h2>Edit Plant</h2>
+                <h2 id="modalTitle">Edit Plant</h2>
                 <form id="editPlantForm">
                     <label for="name">Name:</label>
                     <input type="text" id="editName" name="name"><br>
@@ -88,7 +88,7 @@
             <div id="addPlantModal" class="modal">
                 <div class="modal-content">
                 <span class="close">&times;</span>
-                <h2>Add Plant</h2>
+                <h2 id="modalTitle">Add Plant</h2>
                 <form id="addPlantForm">
                     <label for="name">Name:</label>
                     <input type="text" id="editName" name=" "><br>
@@ -129,5 +129,6 @@
              <script type="module" src="scripts/plant-list.js" ></script>
              <script type="module" src="plant-directory-api/server.js" ></script>
              <script type="module" src="plant-directory-api/models/plantModel.js" ></script>
+             <script type="module" src="plant-directory-api/routes/plants.js" ></script>
 </body>
 </html>

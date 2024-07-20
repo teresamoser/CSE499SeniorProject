@@ -19,7 +19,7 @@ db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 db.once('open', () => console.log('Connected to MongoDB'));
 
 // Routes
-app.use('/api/plants', plantRouter);
+app.use('/routes/plants', plantRouter);
 
 // Start server
 app.listen(PORT, () => {

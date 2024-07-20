@@ -6,7 +6,7 @@ const jwt = require('jsonwebtoken');
 const dotenv = require('dotenv');
 const path = require('path');
 const User = require('./models/user');
-const { post } = require('../plant-directory-api/routes/plants');
+//const { post } = require('../plant-directory-api/routes/plants');
 
 dotenv.config();
 

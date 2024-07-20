@@ -1,8 +1,8 @@
 {
-  "name": "plant-data-api",
+  "name": "plant-directory-api",
   "version": "1.0.0",
   "description": "This is my Senior Project for my Software Engineering Degree with a Web Development Certificate. I am using software as a solution to a problem I was having with rescueing plants on clearance that no one wants.",
-  "main": "app.js",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
