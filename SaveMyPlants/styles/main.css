@@ -383,6 +383,11 @@ article.list {
 
 /* Login page css */
 /*  --FORM-- */
+img#ImageSignup{
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
 #join h2, #join a, h3{
     font-family: Tahoma,Verdana, Geneva, sans-serif;
     font-size: 30px;
