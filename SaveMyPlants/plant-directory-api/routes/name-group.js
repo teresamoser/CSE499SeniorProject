@@ -4,7 +4,7 @@ const cors = require('cors');
 const Plant = require('./models/plantModel');
 
 const app = express();
-const PORT = process.env.PORT;
+const PORT = process.env.PORT || 3001;
 
 // Middleware
 app.use(cors());
@@ -18,7 +18,7 @@ db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 db.once('open', () => console.log('Connected to MongoDB'));
 
 // Routes
-app.get('SaveMyPlants/plant-directory-api/routes/name-group.js', async (req, res) => {
+app.get('/api/routes/name-group', async (req, res) => {
   try {
     const plants = await Plant.find({}, 'name group');
     res.json(plants);
@@ -27,6 +27,19 @@ app.get('SaveMyPlants/plant-directory-api/routes/name-group.js', async (req, res
     res.status(500).json({ error: 'Failed to fetch plants' });
   }
 });
+
+// Fetch plants data from the server
+fetch('scripts/groupServer.js')
+    .then(response => response.json())
+    .then(plants => {
+      const plantsList = document.getElementById('plants-list');
+            plants.forEach(plant => {
+      const li = document.createElement('li');
+            li.textContent = `${plant.name} (${plant.group})`;
+            plantsList.appendChild(li);
+            });
+      })
+    .catch(error => console.error('Error fetching plants:', error));
 
 // Start server
 app.listen(PORT, () => {

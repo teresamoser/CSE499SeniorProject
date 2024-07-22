@@ -30,7 +30,7 @@ const plantSchema = new mongoose.Schema({
 const Plant = mongoose.model('Plant', plantSchema);
 
 // Define the API endpoint
-app.get('/api/plants/name-group', async (req, res) => {
+app.get('/api/routes/name-group', async (req, res) => {
   try {
     const plants = await Plant.find({}, 'name group');
     res.json(plants);

@@ -219,8 +219,11 @@ section.benefit{
 
 #plantList {
     list-style: square;
-    padding: 40px;
+    padding: 0px;
     }
+li {
+    margin-left: 20px;
+}
 
 
 .counter {
@@ -233,6 +236,38 @@ section.benefit{
 
 /* Grouping page css  end */
 
+/* Lighting page css */
+.group4{
+    background-color:#847678;
+    height: 500px;
+    width: auto;
+    padding: 20px;
+}
+
+div.lightcontent{
+    width: auto;
+    height: auto;
+    float: none;
+    margin-right: 30px;
+    background-color:white;
+    border-color: #563635 ;
+    border-style: solid;
+    box-shadow: 0 6px 18px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding: 10px;
+    border-radius: 25px;
+}
+#title {
+    font-family: Tahoma,Verdana, Geneva, sans-serif;
+    font-size: 30px;
+    text-align: center;
+    border-color: #563635 ;
+    background-color:#899878;
+    border-style: solid;
+    box-shadow: 0 6px 18px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding: 10px;
+    border-radius: 25px;
+}
+/* Lighting page css end*/
 
 /* Plant-List page css  */
 #business h1{
@@ -383,11 +418,15 @@ article.list {
 
 /* Login page css */
 /*  --FORM-- */
-img#ImageSignup{
-    max-width: 100%;
-    height: auto;
+#ImageSignup{
+    width: 300px;
+    height: 300px;
     border-radius: 8px;
+    
 }
+/* section#join{
+    background-color:#847678 ;
+} */
 #join h2, #join a, h3{
     font-family: Tahoma,Verdana, Geneva, sans-serif;
     font-size: 30px;
@@ -471,8 +510,8 @@ form label.top input:required:valid {
     }
 /* Form and Login page end */
 
-/* Schedule/Visits per page css */
-.counter {
+/* Visits per page css */
+/* .counter {
     font-family: Tahoma,Verdana, Geneva, sans-serif;
     font-size: 30px;
     text-align: center;
@@ -504,22 +543,28 @@ p {
 .label {
     font-family: Tahoma, Verdana, sans-serif;
     font-weight: 700;
-    }
-.visits {
+    } */
+/* .visits {
     color: rgb(90, 7, 7);
     font-weight: bolder;
     font-size: larger;
-    }
+    } */
 
-#group1, #group2, #group3{
-    display: grid;
-    grid-column: 1 / 2 ;
+
+/* Schedule per page css */
+#group1{
     border: 1px solid rgba(0, 0, 0, 0.2);
     padding: .5rem;
-    min-width: auto;
+    /* min-width: auto; */
+    height: 1000px;
+    width: auto;
     background-color: #563635 ;
     color: #000;      
     margin: auto;
+    }
+#div1{
+    margin-left: 300px;
+    padding: 5px;
     }
 #water {
     float: right;
@@ -532,7 +577,7 @@ p {
     background-color:rgb(236, 225, 195);
     grid-column: 2 / 2; 
   }
-  /* Schedule/Visits end css */
+  /* Schedule end css */
 
 /* ADD/EDIT modal styles */
 .modal {
@@ -567,7 +612,7 @@ p {
     cursor: pointer;
   }
 
-
+/* End of ADD/EDIT modal style */
 
 footer {
     background: #222725;

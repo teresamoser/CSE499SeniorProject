@@ -1,4 +1,4 @@
-const apiEndpoint = 'http://localhost:3001/api/plants/name-group';
+const apiEndpoint = 'http://localhost:3001/SaveMyPlants/scripts/groupServer.js';
 const plantList = document.querySelector('#plantList');
 
 async function getPlantNamesAndGroups() {

@@ -46,89 +46,107 @@
                     </li>
                 </ul>
             </nav>
-                <p><img src="background-images/waterIndoorPlants.jpeg" loading="lazy" width="400" height="200" alt="Plant Studio"><br>
+                <p><img src="./simple-login/images/WetMyPlants.jpeg" loading="lazy" width="400" height="200" alt="Plant Studio"><br>
                 </p> 
         </header>      
     </main>
         <div id="group1">
-                <section class="left">
-                    <div>
-                        <img src="background-images/PeopleAndPlant.jpg" loading="lazy" width="325" height="325" alt="People and Plants ">
-                            <section class="counter">
-                                <p><span class="label">Number of Visits: </span><span class="visits"></span></p>   
-                            </section>
+                    <script>
+                        function allowDrop(ev) {
+                            ev.preventDefault();
+                            }
+                            
+                        function drag(ev) {
+                            ev.dataTransfer.setData("text", ev.target.id);
+                            }
+                            
+                        function drop(ev) {
+                            ev.preventDefault();
+                            var data = ev.dataTransfer.getData("text");
+                            ev.target.appendChild(document.getElementById(data));
+                            }
+                    </script>
+                    
+                    <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    
+                        <img id="drag1" src="./images/EnglishIvy.jpg" draggable="true" ondragstart="drag(event)" width="113" height="13">
+                        <img id="drag2" src="./images/RexBegonia.jpg" draggable="true" ondragstart="drag(event)" width="113" height="13">
+                        <img id="drag3" src="./images/ZZPlant.jpg" draggable="true" ondragstart="drag(event)" width="113" height="13">
+                        <img id="drag4" src="./images/PolkaDotBegonia.jpg" draggable="true" ondragstart="drag(event)" width="113" height="13">
+                        <img id="drag5" src="./images/PeaceLily.jpg" draggable="true" ondragstart="drag(event)" width="113" height="13">
+                        <img id="drag6" src="./images/LemonDropFern.jpg" draggable="true" ondragstart="drag(event)" width="113" height="13">
+                        <img id="drag7" src="./images/ElephantEar.jpg" draggable="true" ondragstart="drag(event)" width="113" height="13">
+                    
+                        <section class="table">
+                            <div id="water">
+                                <table class="table">
+                                    <tr>
+                                    <th>SUN</th>
+                                    <th>MON</th>
+                                    <th>TUE</th>
+                                    <th>WED</th>
+                                    <th>THUR</th>
+                                    <th>FRI</th>
+                                    <th>SAT</th>
+                                    </tr>
+                                    <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    </tr>
+                                    <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    </tr>
+                                    <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    </tr>
+                                    <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    </tr>
+                                    <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    </tr>
+                                    <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </section>
                     </div>
-                </section>
-
-                <section class="table">
-                    <div id="water">
-                        <table class="table">
-                            <tr>
-                            <th>SUN</th>
-                            <th>MON</th>
-                            <th>TUE</th>
-                            <th>WED</th>
-                            <th>THUR</th>
-                            <th>FRI</th>
-                            <th>SAT</th>
-                            </tr>
-                            <tr>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            </tr>
-                            <tr>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            </tr>
-                            <tr>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            </tr>
-                            <tr>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            </tr>
-                            <tr>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            </tr>
-                            <tr>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            </tr>
-                        </table>
-                    </div>
-            </section>
         </div>
 
         <footer>

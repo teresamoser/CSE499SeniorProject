@@ -50,18 +50,38 @@
                 </p> 
         </header>      
     </main>
-<div class="group3">
+<div class="group4">
     <section>
-        <div class="content">
-                <h2>Light Exposure for your Plants</h2>
-        </div>
-    </section>
-    <section class="left">
-        <div>
-        <h3>Grow Lights, How do they work?</h3>
-            <br>
-            <img src="background-images/pot-neon-lighting.jpeg " loading="lazy" width="375" height="325" alt=" ">
-            <br>
+        <div class="lightcontent">
+                <h2 id="title">Light Exposure for your Plants</h2>
+                <script
+                    src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
+                </script>
+                <canvas id="myChart" style="width:100%;max-width:700px"></canvas>
+                <script>
+                    var xValues = ["Plants:","Polka Dot Plant", "Rex Begonia", "Lemon Button Fern", "Peace Lily", "Pink Princess Philodendrin","English Ivy", "Black Rabbit's FootFern", "Flamingo Lily", "Guiana Chestnut"];
+                    var yValues = [0, 10, 50, 50, 80, 60, 20, 70, 30, 30 ];
+                    var barColors = ["white", "green","blue","orange","yellow","red", "darkviolet", "greenyellow","deeppink","goldenrod"];
+                    
+                    new Chart("myChart", {
+                      type: "bar",
+                      data: {
+                        labels: xValues,
+                        datasets: [{
+                          backgroundColor: barColors,
+                          data: yValues
+                        }]
+                      },
+                      options: {
+                        legend: {display: false},
+                        title: {
+                          display: true,
+                          text: "Light Chart for Plants",
+                          
+                        }
+                      }
+                    });
+                    </script>
         </div>
     </section>
 </div>
